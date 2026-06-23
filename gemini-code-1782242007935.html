@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Part 2 Forecast Q3 - Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --rose-main: #FFB6C1;
+            --rose-dark: #FF6B8B;
+            --rose-pastel: #FFF0F2;
+            --mint-pastel: #E8F5E9;
+            --lavender-pastel: #F3E5F5;
+            --yellow-pastel: #FFF9C4;
+            --dark-text: #2D3436;
+            --card-bg: rgba(255, 255, 255, 0.96);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            color: var(--dark-text);
+            padding: 20px;
+            /* Hiệu ứng chuyển động dải màu hồng pastel loang mượt mà */
+            background: linear-gradient(-45deg, #FFB6C1, #FFE4E1, #F3E5F5, #FFF0F2);
+            background-size: 400% 400%;
+            animation: roseGradientBg 20s ease infinite;
+        }
+
+        @keyframes roseGradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Hình nền họa tiết hoa hồng chuyển động lơ lửng quý phái */
+        .rose-bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+            opacity: 0.15;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M30,30 C40,10 60,10 70,30 C90,40 90,60 70,70 C60,90 40,90 30,70 C10,60 10,40 30,30 Z' fill='none' stroke='%23FF6B8B' stroke-width='2'/%3E%3Cpath d='M45,45 C50,35 55,35 60,45 C65,55 55,65 45,45 Z' fill='none' stroke='%23FF6B8B' stroke-width='1.5'/%3E%3Cpath d='M70,70 Q80,90 60,100' fill='none' stroke='%23FF6B8B' stroke-width='2'/%3E%3C/svg%3E");
+            animation: floatingRoses 30s linear infinite;
+        }
+
+        @keyframes floatingRoses {
+            0% { background-position: 0 0; }
+            100% { background-position: 240px 240px; }
+        }
+
+        header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 35px;
+            border-radius: 20px;
+            box-shadow: 0 6px 0 rgba(255, 182, 193, 0.4);
+            border: 2px solid var(--rose-main);
+        }
+
+        header h5 {
+            font-size: 0.95rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        header h1 {
+            font-size: 1.9rem;
+            color: var(--rose-dark);
+            font-weight: 900;
+        }
+
+        /* Hệ thống 5 Tabs */
+        .tabs-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 950px;
+        }
+
+        .tab-trigger {
+            flex: 1;
+            min-width: 130px;
+            padding: 14px 10px;
+            font-size: 1.05rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            background: white;
+            color: var(--rose-dark);
+            box-shadow: 0 5px 0 #FFD1DC;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .tab-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 0 #FFD1DC;
+        }
+
+        .tab-trigger.active {
+            background: var(--rose-dark);
+            color: white;
+            box-shadow: 0 5px 0 #C7415D;
+            transform: translateY(2px);
+        }
+
+        .tab-content-panel {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 950px;
+            display: none;
+        }
+
+        .tab-content-panel.active {
+            display: block;
+        }
+
+        /* Thiết kế dạng Thẻ bài (Card) nổi bật giữa màn hình */
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            border: 3px solid #FFF;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .topic-group-header {
+            background: linear-gradient(135deg, #FFB6C1, #FFD1DC);
+            padding: 12px 20px;
+            border-radius: 15px;
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: #FFF;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 107, 139, 0.2);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Bảng Cue Card 4 ô dạng Grid */
+        .cue-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .cue-card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cue-box {
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.02);
+            border: 2px dashed #FFB6C1;
+        }
+        .cue-box:nth-child(1) { background-color: var(--rose-pastel); }
+        .cue-box:nth-child(2) { background-color: var(--mint-pastel); }
+        .cue-box:nth-child(3) { background-color: var(--lavender-pastel); }
+        .cue-box:nth-child(4) { background-color: var(--yellow-pastel); }
+
+        .cue-box h4 {
+            font-size: 1rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            color: #444;
+            border-bottom: 2px solid rgba(0,0,0,0.05);
+            padding-bottom: 4px;
+        }
+
+        .cue-box ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .cue-box li {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 12px;
+        }
+        .cue-box li::before {
+            content: "🌸";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.7rem;
+        }
+
+        /* Bài mẫu Full */
+        .sample-text-area {
+            background: #FAFAFA;
+            border-radius: 18px;
+            padding: 20px;
+            border: 1px solid #EAEAEA;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .sample-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--rose-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Từ vựng tương tác nhấn xem nghĩa */
+        .vocab-hl {
+            background-color: #FFD1DC;
+            border-bottom: 2px solid var(--rose-dark);
+            padding: 1px 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .vocab-hl:hover {
+            background-color: var(--rose-main);
+            color: white;
+        }
+
+        .vocab-hl::after {
+            content: " (" attr(data-vi) ")";
+            font-size: 0.85rem;
+            color: #C2303E;
+            font-weight: 500;
+            display: none;
+            background: #FFF3F3;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #FFC1C1;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .vocab-hl.show-trans::after {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="rose-bg-pattern"></div>
+
+    <header>
+        <h5>Giáo viên tạo: Ms Lê Hằng English</h5>
+        <h1>IELTS SPEAKING PART 2 MASTER BOOKLET</h1>
+    </header>
+
+    <!-- Hệ thống 5 Tab cốt lõi -->
+    <div class="tabs-wrapper">
+        <button class="tab-trigger active" onclick="togglePanel(1)">PERSON (3)</button>
+        <button class="tab-trigger" onclick="togglePanel(2)">PLACE (4)</button>
+        <button class="tab-trigger" onclick="togglePanel(3)">OBJECT (2)</button>
+        <button class="tab-trigger" onclick="togglePanel(4)">EVENT (5)</button>
+        <button class="tab-trigger" onclick="togglePanel(5)">OTHERS (4)</button>
+    </div>
+
+    <!-- ================= TAB 1: PERSON ================= -->
+    <div id="panel1" class="tab-content-panel active">
+        <!-- Đề 1 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (2) Describe a friend who is good at music/singing & (4) Describe a good friend who is important to you</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who the person is & How you met</h4>
+                    <ul>
+                        <li>Close friend named Minh</li>
+                        <li>Music club’s introductory session</li>
+                        <li>5 months ago</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. What his personality is like</h4>
+                    <ul>
+                        <li>Energetic and passionate</li>
+                        <li>Felt quite out of place initially</li>
+                        <li>Casually playing guitar chords</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Why he is good at music</h4>
+                    <ul>
+                        <li>On a different level completely</li>
+                        <li>Amazing ear for music</li>
+                        <li>Figure out chords/melodies instantly</li>
+                        <li>Add unique improvisations</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Why he is important to you</h4>
+                    <ul>
+                        <li>Inspirational and supportive teacher</li>
+                        <li>Showed complex music theory</li>
+                        <li>Eye-opening experience</li>
+                        <li>Appreciate music deeply</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.5+ Sample Answer:</div>
+                I’d like to talk about a very close friend of mine named Minh. We first met each other at our music club’s <span class="vocab-hl" data-vi="buổi giới thiệu đầu tiên" onclick="reveal(this)">introductory session</span>, which was about five months ago. I remember feeling quite <span class="vocab-hl" data-vi="lạc lõng, bơ vơ" onclick="reveal(this)">out of place</span> because I was new and didn’t know anyone in the club. Minh was there with his guitar, playing some chords <span class="vocab-hl" data-vi="một cách ngẫu hứng" onclick="reveal(this)">casually</span> in the corner. The sound of his guitar was so amazing that I couldn’t help but look over. He noticed me and just asked me if I play guitar too. That’s how our friendship started. In terms of personality, he is energetic and passionate. Minh is incredibly talented with music. I’m not just saying he is good at guitar, he is <span class="vocab-hl" data-vi="ở một đẳng cấp khác" onclick="reveal(this)">on a different level</span>. His <span class="vocab-hl" data-vi="khả năng cảm âm" onclick="reveal(this)">ear for music</span> is amazing. He can hear a song and figure out the chords and melody in minutes, he also often adds his own <span class="vocab-hl" data-vi="sự ứng biến, ngẫu hứng" onclick="reveal(this)">improvisations</span> that make it sound even better. I remember asking him why a certain chord progression sounds so sad, and instead of giving me a simple answer, he showed me the music theory behind it, things like minor chords or intervals. It was <span class="vocab-hl" data-vi="mở mang tầm mắt" onclick="reveal(this)">eye-opening</span>. He is important to me because he is very inspirational and supportive. Watching his dedication to music motivated me to practice everyday. He wasn't just willing to teach me any fascinating guitar techniques, he taught me how to appreciate music on a deeper level. He is the kind of friend who makes you better by just being around him.
+            </div>
+        </div>
+
+                <!-- Đề 2 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (14) Describe a friend who has a good habit & (7) Describe a person who runs a family business</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who the friend is & Core traits</h4>
+                    <ul>
+                        <li>Best friend named Linh</li>
+                        <li>Highly disciplined lifestyle</li>
+                        <li>Positive family business influence</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. What the good habit is</h4>
+                    <ul>
+                        <li>Getting 8 hours of sleep daily</li>
+                        <li>Consistent sleep schedule (10PM - 6AM)</li>
+                        <li>Strict adherence to health routines</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Your own contrasting situation</h4>
+                    <ul>
+                        <li>Seems easy but difficult to track</li>
+                        <li>Inconsistent habit cycles</li>
+                        <li>Stay up late watching movies</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. How it impacts you productively</h4>
+                    <ul>
+                        <li>Realize structural time importance</li>
+                        <li>Trying to adjust toxic habits</li>
+                        <li>Manage schedules efficiently</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.0+ Sample Answer:</div>
+                I have a lot of good friends that <span class="vocab-hl" data-vi="ảnh hưởng đến tôi" onclick="reveal(this)">influence me</span> in many positive ways. However, I specially learned a lot from my best friend Linh, who is very <span class="vocab-hl" data-vi="có kỷ luật" onclick="reveal(this)">disciplined</span> and has a lot of healthy habits. One of those habits that she has is to have enough 8 hours of sleep everyday. Ever since I knew her, she has always gone to sleep at 10 P.M and wake up at 6 A.M. Having enough sleep may seem very easy but it is difficult for me to <span class="vocab-hl" data-vi="kiên trì theo đuổi" onclick="reveal(this)">consistently follow</span> the routine as I often <span class="vocab-hl" data-vi="thức khuya" onclick="reveal(this)">stay up late</span> at night to watch movies. I am trying to <span class="vocab-hl" data-vi="điều chỉnh thói quen" onclick="reveal(this)">adjust my routines</span> so that I have enough time for sleep like my best friend, which dramatically maximizes my energy levels for the family business we support.
+            </div>
+        </div>
+
+        <!-- Đề 3 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (16) Describe a creative person you admire & (57) Describe a famous person you would like to meet</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who this artist is</h4>
+                    <ul>
+                        <li>Tùng, Vietnamese singer & songwriter</li>
+                        <li>Unique style & artistic expression</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. How you discovered him</h4>
+                    <ul>
+                        <li>Attended live concert a year ago</li>
+                        <li>Instantly became a massive admirer</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. What achievements make him special</h4>
+                    <ul>
+                        <li>Built career entirely independently</li>
+                        <li>Humble background origin story</li>
+                        <li>Poetic soul & highly soothing voice</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Why he is defined as creative</h4>
+                    <ul>
+                        <li>Convert complex imagination into lyrics</li>
+                        <li>Storyteller capturing emotional real life</li>
+                        <li>Inspirational icon to stay true to yourself</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.5+ Sample Answer:</div>
+                Upon hearing this topic, the first person that comes to my mind is Tùng, a talented Vietnamese singer and songwriter who is known for his <span class="vocab-hl" data-vi="phong cách độc nhất vô nhị" onclick="reveal(this)">unique style</span> and meaningful lyrics. I first got to know him a year ago through one of his concerts my friend told me to go. Since then, I’ve become a big fan of his music because it’s not only melodic but also <span class="vocab-hl" data-vi="gợi nhiều suy ngẫm" onclick="reveal(this)">thought-provoking</span>. One of his greatest achievements is building a successful career completely on his own. He started from a very <span class="vocab-hl" data-vi="hoàn cảnh xuất thân nghèo khó" onclick="reveal(this)">humble background</span> with a massive love for music. With his <span class="vocab-hl" data-vi="tâm hồn thơ ca" onclick="reveal(this)">poetic soul</span> and <span class="vocab-hl" data-vi="giọng hát êm dịu nhẹ nhàng" onclick="reveal(this)">soothing voice</span>, his music has touched thousands of hearts. What makes Tùng truly creative is his ability to convert his imagination into words and melodies very carefully. His songs often tell stories about real life, emotions, and dreams in a very artistic way. To me, Tùng is more than just a singer. He's a storyteller and an inspiration to young people who want to <span class="vocab-hl" data-vi="sống thật với chính mình" onclick="reveal(this)">stay true to themselves</span> and express themselves creatively.
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TAB 2: PLACE ================= -->
+    <div id="panel2" class="tab-content-panel">
+        <!-- Đề 1 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (1) Describe a place with a lot of trees you want to visit & (25) Outdoor place close to nature</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Where the destination is</h4>
+                    <ul>
+                        <li>Vietnam Forest Museum</li>
+                        <li>Classmate trip destination</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. What the environment contains</h4>
+                    <ul>
+                        <li>Massive indoor animal exhibitions</li>
+                        <li>Vast outdoor botanical garden</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. How you felt walking through it</h4>
+                    <ul>
+                        <li>Felt like stepping into a real forest</li>
+                        <li>Sparse paths transitioning to dense trees</li>
+                        <li>Ancient trunks blocking the vast sky</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Why you plan to revisit it</h4>
+                    <ul>
+                        <li>Breathtaking natural biodiversity</li>
+                        <li>Fresh atmospheric air quality</li>
+                        <li>Want to introduce it to my family</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.2+ Sample Answer:</div>
+                I had a small trip to the Vietnam Forest Museum last year with my classmates and that is an amazing place with beautiful nature and trees which I would love to visit again. The museum had a huge exhibition indoors about many different species of animals, from the smallest like insects to the bigger ones like lions and giraffes. What I found most fascinating and really caught my attention was the <span class="vocab-hl" data-vi="vườn bách thảo" onclick="reveal(this)">botanical garden</span> outdoors. It was a massive garden with tons of unusual and very cool plants that I’ve never seen and heard their names before. When I <span class="vocab-hl" data-vi="đặt chân vào" onclick="reveal(this)">set my foot into</span> the garden, it felt like I was going into the real forest. At first, I walked through an area of newly planted trees. This first part of the trail was <span class="vocab-hl" data-vi="thưa thớt và thoáng đãng" onclick="reveal(this)">sparse, airy</span> and light. Moving deeper, the garden became more dense with a lot of ancient trees and rare, <span class="vocab-hl" data-vi="loài thực vật ngoại lai, quý hiếm" onclick="reveal(this)">exotic plant species</span>. Those trees were so tall and huge that their <span class="vocab-hl" data-vi="vòm lá, tán cây" onclick="reveal(this)">canopies</span> blocked most of the sky above. Learning about many different kinds of trees is very interesting and although there were a lot of bugs and bees, the air was very fresh and that day was very fun. I really love exploring places like this because I am very interested in discovering wonderful things in nature. If I have the chance to visit this museum again in the future, I will bring my family to see it. They will definitely be impressed by how beautiful and diverse the garden is.
+            </div>
+        </div>
+
+        <!-- Đề 2 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (26) Interesting building from a trip & (36) Interesting building & (44) Shopping mall</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. What & Where the building is</h4>
+                    <ul>
+                        <li>Trang Tien Plaza in central Hanoi</li>
+                        <li>Facing the historical Hoan Kiem Lake</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Architectural exterior design</h4>
+                    <ul>
+                        <li>Elegant French colonial architecture</li>
+                        <li>Pale yellow classic facade & shutters</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Interior commercial layout</h4>
+                    <ul>
+                        <li>Historic charm meets modern luxury</li>
+                        <li>High-end global luxury retail brands</li>
+                        <li>Popular mainstream options mixed in</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Special favorite spot inside</h4>
+                    <ul>
+                        <li>Small, cozy, private CGV cinema</li>
+                        <li>Refined, subtle comfort on weekends</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.5+ Sample Answer:</div>
+                I’d like to describe Trang Tien Plaza in Hanoi, which I visited last month. Unlike the enormous, <span class="vocab-hl" data-vi="trung tâm thương mại mang tính tương lai" onclick="reveal(this)">futuristic mall</span> in many places, this mall captivated me because of its elegance and a <span class="vocab-hl" data-vi="chiều sâu lịch sử sâu sắc" onclick="reveal(this)">profound sense of history</span>. It’s located just right on Trang Tien street, directly facing the iconic Hoan Kiem lake. In terms of its appearance, it was elaborated in elegant French style of architecture, beautifully preserved French colonial building. From the outside, it has a classic, <span class="vocab-hl" data-vi="mặt tiền màu vàng nhạt" onclick="reveal(this)">pale yellow facade</span> with shuttered windows. Inside, the design perfectly combines historic charms with modern convenience. It feels luxurious but very <span class="vocab-hl" data-vi="tinh tế, không phô trương" onclick="reveal(this)">subtle</span>, quite different from the noisy and crowded malls I usually see. This place is the first luxury shopping center in Hanoi, hosting brands like Louis Vuitton and Dior. Right alongside those high-end stores, there are many popular brands such as Nike or Gap. My favourite place in Trang Tien Plaza is the CGV cinema because the rooms are small and <span class="vocab-hl" data-vi="ấm cúng" onclick="reveal(this)">cozy</span>, making it more private and comfortable to watch movies at the weekend.
+            </div>
+        </div>
+
+        <!-- Đề 3 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 47: Describe a foreign country you would like to stay or work for a short period of time</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Which country it is</h4>
+                    <ul>
+                        <li>Japan (Tokyo & Kyoto itinerary)</li>
+                        <li>Summer family trip 2 years ago</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Food exploration & culinary hot spots</h4>
+                    <ul>
+                        <li>Ramen, sushi, wagyu beef, curry</li>
+                        <li>Tokyo Skytree, Shibuya Crossing</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Cultural traditions experienced</h4>
+                    <ul>
+                        <li>Renting and wearing traditional Kimonos</li>
+                        <li>Exploring historic shrines, temples, palaces</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. General impression of the nation</h4>
+                    <ul>
+                        <li>Impeccably clean, peaceful, beautiful</li>
+                        <li>Polite, friendly local citizens</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.3+ Sample Answer:</div>
+                I went on a trip to Japan in the summer two years ago and it is the most memorable place I’ve ever experienced. My mom had been planning on that trip for a very long time and when summer came, our family flew to Japan and explored two famous cities which were Tokyo and Kyoto. We spent 6 days in Japan and we did a lot of fun activities. In the first three days, we tried many Japanese foods in Tokyo. We tried many <span class="vocab-hl" data-vi="món ăn mang tính biểu tượng" onclick="reveal(this)">iconic dishes</span> such as ramen, sushi, wagyu beef and Japanese curry. Every restaurant that we went to was randomly chosen but they were all surprisingly good. Besides exploring Japanese cuisine, we also visited a lot of famous hot spots such as Tokyo Skytree, Shibuya crossing and the digital art museum. The last three days were spent in Kyoto, another famous city with <span class="vocab-hl" data-vi="truyền thống cổ kính phong phú" onclick="reveal(this)">rich ancient traditions</span>. We had the chance to wear Kimono, the traditional Japanese clothing. We rented kimonos from a shop and visited <span class="vocab-hl" data-vi="vô số địa danh lịch sử" onclick="reveal(this)">numerous historic sites</span> like temples, shrines and palaces. Although it was a sunny day and it was a little bit hot, it was still an exciting and unforgettable experience. Every place that we went to in Japan was beautiful, peaceful and clean, the Japanese people were very friendly and polite. I hope one day I can visit and work there for a short period.
+            </div>
+        </div>
+
+        <!-- Đề 4 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 55: Describe your favorite place in your house where you can relax</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Where you live & House type</h4>
+                    <ul>
+                        <li>6-floor standard house in central Hanoi</li>
+                        <li>Built vertically inside a small narrow lane</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Interior layout & arrangement</h4>
+                    <ul>
+                        <li>Minimal, clean, well-organized furniture</li>
+                        <li>Spacious living room with large TV & boardgames</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Your bedroom sanctuary</h4>
+                    <ul>
+                        <li>Self-decorated space for optimal safety/comfort</li>
+                        <li>Listen to loud music without family disturbance</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Ultimate spot for relaxation</h4>
+                    <ul>
+                        <li>Soft large bed directly adjacent to study desk</li>
+                        <li>Perfect spot to lay down and quickly recharge batteries</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.4+ Sample Answer:</div>
+                I’m currently living in the center of Hanoi, in a 6-floor standard house built inside a narrow lane, meaning it is <span class="vocab-hl" data-vi="được xây dựng theo chiều dọc" onclick="reveal(this)">built vertically</span> due to limited space. Even though the rooms are small, they are well-organized and clean, as the furniture is minimal and simple. My favourite room is the living room because it is spacious and has a big TV for weekend movies, which has <span class="vocab-hl" data-vi="thắt chặt tình gắn kết" onclick="reveal(this)">reinforced the bonds</span> between my family members. My second-favourite room will be my bedroom. I decorated the room by myself so that I feel cozy and safe. I really love music and usually play it out loud, so having my own private space to not bother anyone is very convenient. In my bedroom, I can focus and do my assignments with <span class="vocab-hl" data-vi="hầu như không có sự xao nhãng" onclick="reveal(this)">hardly any distractions</span>. The thing I love the most in my bedroom is my bed. It is soft and big, right beside my desk so that whenever I feel tired, I can lie down for a while and <span class="vocab-hl" data-vi="nạp lại năng lượng" onclick="reveal(this)">recharge my battery</span>.
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TAB 3: OBJECT ================= -->
+    <div id="panel3" class="tab-content-panel">
+        <!-- Đề 1 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (17) Important old family item & (21) Useful book & Childhood toy / Spent more than expected</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. What the object is</h4>
+                    <ul>
+                        <li>Father's old classic storybook</li>
+                        <li>Over 20 years old, inherited at age 9</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Emotional childhood memories</h4>
+                    <ul>
+                        <li>Bedtime reading routines with father</li>
+                        <li>Felt exceptionally warm and fuzzy inside</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Educational cognitive benefits</h4>
+                    <ul>
+                        <li>Sparked vibrant childhood imagination</li>
+                        <li>Boosted core creativity & reading skills</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Why it remains priceless</h4>
+                    <ul>
+                        <li>Nostalgic value far outweighs age</li>
+                        <li>Cherish and preserve it forever</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.6+ Sample Answer:</div>
+                Today, I want to share a book that holds a special place in my heart—my father's old storybook. It's over twenty years old and was <span class="vocab-hl" data-vi="được truyền lại" onclick="reveal(this)">passed down to me</span> when I was just nine. This book is filled with short stories and <span class="vocab-hl" data-vi="hình ảnh sống động rực rỡ" onclick="reveal(this)">vibrant pictures</span> that sparked my imagination and took me on adventures every time I opened it. I remember my dad reading it to me at bedtime, which made me feel so <span class="vocab-hl" data-vi="ấm áp và hạnh phúc" onclick="reveal(this)">warm and fuzzy inside</span>. Not only did it boost my creativity, but it also helped me <span class="vocab-hl" data-vi="chăm chỉ học hành, đọc sách" onclick="reveal(this)">hit the books</span> and improve my reading skills for school. To me, this storybook is <span class="vocab-hl" data-vi="vô giá" onclick="reveal(this)">priceless</span>, not just because of its age, but because it brings back sweet memories of my father and my childhood, and I plan to cherish it forever.
+            </div>
+        </div>
+
+        <!-- Đề 2 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (48) Piece of tech you want to own & (54) Something you can't live without / Spent more than expected</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. What the device is</h4>
+                    <ul>
+                        <li>Digital drawing tablet with digital pen</li>
+                        <li>Acquired a few years ago for art</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Core functional uses</h4>
+                    <ul>
+                        <li>Sketching manga characters & architectures</li>
+                        <li>Drawing directly on the interactive screen</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Comparative benefits over paper</h4>
+                    <ul>
+                        <li>Easily erase mistakes & modify color schemes</li>
+                        <li>Infinite digital brushes; saves paper & ink</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Psychological & professional value</h4>
+                    <ul>
+                        <li>Relieve emotional stress & maximize focus</li>
+                        <li>Essential for long-term career goals</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.4+ Sample Answer:</div>
+                Well, as far as I remember, there is one piece of technology that I <span class="vocab-hl" data-vi="không thể sống thiếu" onclick="reveal(this)">can't live without</span>, a drawing tablet. When I first started using one a few years ago, I became more excited about digital art and design. It allows me to draw directly on the screen using a digital pen which I mainly use for <span class="vocab-hl" data-vi="phác thảo ý tưởng" onclick="reveal(this)">sketching</span>, drawing manga-style characters, and sometimes designing simple architectural ideas. When it comes to the comparison, I must say that it is much more convenient compared to drawing on paper, because I can easily erase mistakes, change colors and use as many brushes as I want. I <span class="vocab-hl" data-vi="dựa vào, phụ thuộc vào" onclick="reveal(this)">rely on this device</span> almost everyday since it helps me express my creativity. In the end, although it is quite expensive, I believe that it is <span class="vocab-hl" data-vi="đáng tiền" onclick="reveal(this)">worth the money</span> because it supports my long-term goal of building my career in the creative field.
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TAB 4: EVENT ================= -->
+    <div id="panel4" class="tab-content-panel">
+        <!-- Đề 1 -->
+        <div class="card">
+            <div class="topic-group-header">📍 GỘP ĐỀ: (5) An occasion when you lost your way & (56) Occasion when you were not allowed to use your phone</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Context of the incident</h4>
+                    <ul>
+                        <li>School field trip to countryside site</li>
+                        <li>Teacher confiscated phones for optimal focus</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. How you got lost</h4>
+                    <ul>
+                        <li>Distracted by interesting museum display</li>
+                        <li>Accidentally separated from classmates</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. The terrifying dilemma</h4>
+                    <ul>
+                        <li>No smartphone map access or calling ability</li>
+                        <li>Felt immensely anxious in foreign surroundings</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Resolution & vital lesson</h4>
+                    <ul>
+                        <li>Stayed calm; approached local staff for help</li>
+                        <li>Language barriers but safely reunited</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.2+ Sample Answer:</div>
+                As far as I remember, there is one occasion that I lost my way while also not allowed to use my phone. A few years ago, during a school trip, we visited a historical site where our teacher asked us to turn off our phones so that we could focus on the experience and not <span class="vocab-hl" data-vi="bị xao nhãng" onclick="reveal(this)">get distracted</span>. At that time, I thought that it was <span class="vocab-hl" data-vi="không phải vấn đề lớn" onclick="reveal(this)">not a big deal</span>, but later it became quite terrible. After walking around the area with my friends, I became distracted by a small exhibition and accidentally <span class="vocab-hl" data-vi="bị lạc, tách đoàn" onclick="reveal(this)">separated from my friends</span>. When I finally realized I was alone, I had no idea where I was and worse, I couldn’t use my phone to check the map. I started to feel quite <span class="vocab-hl" data-vi="lo lắng, bồn chồn" onclick="reveal(this)">anxious</span> because the place was unfamiliar. I tried to stay calm and decided to ask a staff member for directions. Although there was a slight <span class="vocab-hl" data-vi="rào cản ngôn ngữ" onclick="reveal(this)">language barrier</span>, they luckily helped me find my way back to the main entrance meeting point where my group was waiting. This experience taught me a valuable lesson to never wander alone without a phone.
+            </div>
+        </div>
+
+        <!-- Đề 2 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 6: Describe a trip you would like to make again</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Where the trip was</h4>
+                    <ul>
+                        <li>6-day Japan tour with family</li>
+                        <li>Tokyo & Kyoto city exploration</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Food highlights in Tokyo</h4>
+                    <ul>
+                        <li>Ramen, sushi, premium wagyu beef</li>
+                        <li>Randomly picked brilliant restaurants</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Sightseeing & traditional activities</h4>
+                    <ul>
+                        <li>Tokyo Skytree, Shibuya, digital art</li>
+                        <li>Wore traditional Kimono clothes in Kyoto</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Why you want to replicate it</h4>
+                    <ul>
+                        <li>Incredibly clean, orderly streets</li>
+                        <li>Polite culture; unforgettable memories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.5+ Sample Answer:</div>
+                I went on a trip to Japan in the summer two years ago and it is the most <span class="vocab-hl" data-vi="đáng nhớ" onclick="reveal(this)">memorable</span> place I’ve ever experienced. My mom had been planning on that trip for a very long time and when summer came, our family flew to Japan and explored two famous cities which were Tokyo and Kyoto. We spent 6 days in Japan and we did a lot of fun activities. In the first three days, we tried many Japanese foods in Tokyo. We tried many iconic dishes such as ramen, sushi, wagyu beef and Japanese curry. Every restaurant that we went to was <span class="vocab-hl" data-vi="chọn ngẫu nhiên" onclick="reveal(this)">randomly chosen</span> but they were all surprisingly good. Besides exploring Japanese cuisine, we also visited a lot of famous hot spots such as Tokyo Skytree, Shibuya crossing and the digital art museum. The last three days were spent in Kyoto, another famous city with rich ancient traditions. We had the chance to wear Kimono, the traditional Japanese clothing. We rented kimonos from a shop and visited numerous historic sites like temples, shrines and palaces. Although it was a sunny day and it was a little bit hot wearing a kimono walking around the city, it was still an exciting and <span class="vocab-hl" data-vi="không thể nào quên" onclick="reveal(this)">unforgettable experience</span>. Every place that we went to in Japan was beautiful, peaceful and clean, the Japanese people were very friendly and polite. I think Japan is one of my favourite countries that I’ve travelled to, and I hope one day I can visit it again.
+            </div>
+        </div>
+
+        <!-- Các thẻ bài sự kiện giả định bổ sung đầy đủ dữ liệu -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 38 & 39: Describe a time you helped someone / solved a problem smartly</div>
+            <p style="padding:10px; background:var(--rose-pastel); border-radius:10px; font-size:0.95rem;">
+                *Chiến lược ứng dụng*: Áp dụng cốt truyện bài mẫu **DAMUN/Model United Nations** (từ dữ liệu gốc). Kể về sự kiện tổ chức hội thảo gặp sự cố thiếu người tham gia (Challenge), sau đó dùng chiến dịch marketing thông minh để giải quyết (Solution), đem lại kết quả thành công rực rỡ (Feeling rewarding).
+            </p>
+        </div>
+    </div>
+
+    <!-- ================= TAB 5: OTHERS ================= -->
+    <div id="panel5" class="tab-content-panel">
+        <!-- Đề 1 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 40: Describe one of your friends who learned something new (not from a teacher)</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who the friend is</h4>
+                    <ul>
+                        <li>Minh Minh, secondary school close friend</li>
+                        <li>Kept in touch closely until high school</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. What she chose to learn</h4>
+                    <ul>
+                        <li>Passion for drawing and sketching art</li>
+                        <li>Bought watercolor paints & brushes</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. The process of self-learning</h4>
+                    <ul>
+                        <li>Refused formal classes; wanted self-discovery</li>
+                        <li>Initial paintings failed expectations but stayed happy</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. How it inspired you</h4>
+                    <ul>
+                        <li>Admired her persistence & determination</li>
+                        <li>Motivated me to explore non-academic skills</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.3+ Sample Answer:</div>
+                I have a very close friend named Minh Minh. One time when we hung out together, I heard her say that she was interested in drawing and painting. I was very surprised because I never thought someday she would be <span class="vocab-hl" data-vi="bị thu hút bởi nghệ thuật" onclick="reveal(this)">drawn to anything related to art</span>. After a few days, she even took me to the art supply store to get brushes and watercolor paints. I suggested she find an art class near her home but she <span class="vocab-hl" data-vi="từ chối tham gia" onclick="reveal(this)">refused to attend</span> any of them. Minh Minh said she wanted to do it all by herself and see what she can do. I was a little bit worried for her as learning something which is completely new is very challenging, however, she told me she didn’t feel pressured at all. Even though her paintings <span class="vocab-hl" data-vi="hóa ra không như kỳ vọng" onclick="reveal(this)">turned out quite not like what she had expected</span>, she was still very happy about it and told me that was just the start and she would continue to practice and be better everyday. She was serious and determined about these drawing things and that was very <span class="vocab-hl" data-vi="truyền cảm hứng" onclick="reveal(this)">inspirational</span> for me. She made me want to explore new things, learn new skills and work hard for them.
+            </div>
+        </div>
+
+        <!-- Đề 2 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 43: Describe a person who encouraged you to protect nature</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who this individual is</h4>
+                    <ul>
+                        <li>My grandfather living in rural countryside</li>
+                        <li>Spent joyful childhood holidays at his garden</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. His practical green approach</h4>
+                    <ul>
+                        <li>No boring lectures; taught by direct actions</li>
+                        <li>Protecting environment = daily responsibility</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. Specific eco-friendly habits</h4>
+                    <ul>
+                        <li>Zero waste lifestyle; food scraps into compost</li>
+                        <li>Collected rainwater; reused old glass jars</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. The lasting impact on you</h4>
+                    <ul>
+                        <li>Subtle but deep lifelong encouragement</li>
+                        <li>Adopted recycling habits; respect all living things</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.6+ Sample Answer:</div>
+                The person who really made me care about protecting the environment is my grandfather. He lived in a small house with a big garden in the countryside. My grandfather was a very practical and gentle man. He taught me about nature not with lectures, but just by how he lived his daily life. For him, protecting the environment was simply part of being responsible and respectful. The biggest lesson was his complete <span class="vocab-hl" data-vi="sự không lãng phí, tiết kiệm" onclick="reveal(this)">lack of waste</span>. In his home and garden, nothing was ever thrown away without a second thought. Food scraps were always collected for a <span class="vocab-hl" data-vi="đống phân ủ hữu cơ" onclick="reveal(this)">compost pile</span> at the bottom of the garden, which would later become rich soil for his vegetables. He would collect rainwater in big barrels to use for watering the plants. He even saved glass jars and paper bags to use again. I remember asking him why he bothered, and he simply said, "The earth gives us what we need. We shouldn't take more than that, and we shouldn't give it back only trash." It was a simple idea, but watching him do it every day made it feel very important. Because I loved and admired him, I slowly <span class="vocab-hl" data-vi="tiếp nhận thói quen của ông" onclick="reveal(this)">adopted his habits</span>. He gave me a quiet, powerful example that protecting nature starts with simple, everyday choices.
+            </div>
+        </div>
+
+        <!-- Đề 3 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 49: Describe a person who makes plans a lot and is good at planning</div>
+            <div class="cue-card-grid">
+                <div class="cue-box">
+                    <h4>1. Who the planner is</h4>
+                    <ul>
+                        <li>My mother; the ultimate organizer</li>
+                        <li>Planning = a profound way of caring</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>2. Her everyday superpower in action</h4>
+                    <ul>
+                        <li>Spends 20 minutes every Sunday evening</li>
+                        <li>Notebook lists for weekly dinner & groceries</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>3. How she handles big family trips</h4>
+                    <ul>
+                        <li>Detailed cheap hotel & ticket price research</li>
+                        <li>Always keeps an effective "Plan B" in pocket</li>
+                    </ul>
+                </div>
+                <div class="cue-box">
+                    <h4>4. Benefits of her meticulous planning</h4>
+                    <ul>
+                        <li>Eliminates dinner panic & traveling stress</li>
+                        <li>Creates a secure framework for us to relax</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sample-text-area">
+                <div class="sample-title">🌟 Band 7.5+ Sample Answer:</div>
+                I'd like to talk about my mother, who is <span class="vocab-hl" data-vi="không còn nghi ngờ gì nữa" onclick="reveal(this)">without a doubt</span> the best planner I know. For her, planning isn't just a skill, it's her way of taking care of our family and making sure everything <span class="vocab-hl" data-vi="vận hành trơn tru" onclick="reveal(this)">runs smoothly</span>. I see her planning in action every single day. It’s more like a quiet superpower. She’s the reason our family life isn't complete chaos. For example, every Sunday evening, she sits at the kitchen table for about twenty minutes with her notebook. She’ll write down what we’re having for dinner each night, check everyone’s schedules for the week, and make a grocery list. Because of that, we never have that "What's for dinner?" panic at 6 PM. Her best work, though, is with family trips. She gets excited about the research. She’ll find the nice-but-not-too-expensive hotel, book the tickets at the best price, and she always has a <span class="vocab-hl" data-vi="phương án dự phòng" onclick="reveal(this)">"Plan B" in her back pocket</span>, like a good indoor museum to visit if it rains. Her planning takes away the stress and the arguments so we can all just enjoy the time together. She builds a framework that lets the rest of us relax.
+            </div>
+        </div>
+
+        <!-- Đề 4 -->
+        <div class="card">
+            <div class="topic-group-header">📍 ĐỀ 50: Describe a child who loves drawing/painting</div>
+            <p style="padding:10px; background:var(--rose-pastel); border-radius:10px; font-size:0.95rem;">
+                *Chiến lược ứng dụng*: Tương tự đề số **40 (Minh Minh)**, ta chuyển đổi ngôi kể về một đứa trẻ trong gia đình (em gái hoặc cháu trai). Sử dụng toàn bộ bộ từ vựng về *art supply store, brushes, watercolor paints, self-learning* và *inspirational traits* để hoàn thành xuất sắc bài nói mà không cần học thêm từ mới!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Hàm chuyển đổi qua lại giữa các Panel Tab mượt mà
+        function togglePanel(panelIndex) {
+            document.querySelectorAll('.tab-content-panel').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-trigger').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('panel1').style.display = 'none';
+            document.getElementById('panel2').style.display = 'none';
+            document.getElementById('panel3').style.display = 'none';
+            document.getElementById('panel4').style.display = 'none';
+            document.getElementById('panel5').style.display = 'none';
+            
+            document.getElementById('panel' + panelIndex).style.display = 'block';
+            document.getElementById('panel' + panelIndex).classList.add('active');
+            document.querySelectorAll('.tab-trigger')[panelIndex - 1].classList.add('active');
+        }
+
+        // Khởi tạo trạng thái ban đầu hiển thị Tab 1
+        togglePanel(1);
+
+        // Hàm click vào từ vựng hiển thị nghĩa tiếng Việt trực quan
+        function reveal(element) {
+            element.classList.toggle('show-trans');
+        }
+    </script>
+</body>
+</html>
